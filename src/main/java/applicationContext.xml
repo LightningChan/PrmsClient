@@ -17,4 +17,7 @@
 	<context:component-scan base-package="com.ucas.prms"></context:component-scan>
 	<context:annotation-config />
 	
+	<!-- json 转换类 -->
+	<bean id="objectMapper" class="org.codehaus.jackson.map.ObjectMapper"></bean>
+	
 </beans>

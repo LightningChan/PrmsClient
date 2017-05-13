@@ -1,67 +1,55 @@
 
 /**
- * Save.java
+ * GetAllByArticleId.java
  *
  * This file was auto-generated from WSDL
  * by the Apache Axis2 version: 1.7.4  Built on : Oct 21, 2016 (10:48:01 BST)
  */
 
             
-                package com.ucas.prms.server.service.impl;
+                package com.ucas.prms.server.service.reply;
             
 
             /**
-            *  Save bean class
+            *  GetAllByArticleId bean class
             */
             @SuppressWarnings({"unchecked","unused"})
         
-        public  class Save
+        public  class GetAllByArticleId
         implements org.apache.axis2.databinding.ADBBean{
         
                 public static final javax.xml.namespace.QName MY_QNAME = new javax.xml.namespace.QName(
                 "http://impl.service.server.prms.ucas.com",
-                "save",
+                "getAllByArticleId",
                 "ns2");
 
             
 
                         /**
-                        * field for User
+                        * field for Id
                         */
 
                         
-                                    protected com.ucas.prms.server.entity.xsd.User localUser ;
+                                    protected long localId ;
                                 
-                           /*  This tracker boolean wil be used to detect whether the user called the set method
-                          *   for this attribute. It will be used to determine whether to include this field
-                           *   in the serialized XML
-                           */
-                           protected boolean localUserTracker = false ;
-
-                           public boolean isUserSpecified(){
-                               return localUserTracker;
-                           }
-
-                           
 
                            /**
                            * Auto generated getter method
-                           * @return com.ucas.prms.server.entity.xsd.User
+                           * @return long
                            */
-                           public  com.ucas.prms.server.entity.xsd.User getUser(){
-                               return localUser;
+                           public  long getId(){
+                               return localId;
                            }
 
                            
                         
                             /**
                                * Auto generated setter method
-                               * @param param User
+                               * @param param Id
                                */
-                               public void setUser(com.ucas.prms.server.entity.xsd.User param){
-                            localUserTracker = true;
-                                   
-                                            this.localUser=param;
+                               public void setId(long param){
+                            
+                                            this.localId=param;
                                        
 
                                }
@@ -113,29 +101,30 @@
                    java.lang.String namespacePrefix = registerPrefix(xmlWriter,"http://impl.service.server.prms.ucas.com");
                    if ((namespacePrefix != null) && (namespacePrefix.trim().length() > 0)){
                        writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","type",
-                           namespacePrefix+":save",
+                           namespacePrefix+":getAllByArticleId",
                            xmlWriter);
                    } else {
                        writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","type",
-                           "save",
+                           "getAllByArticleId",
                            xmlWriter);
                    }
 
                
                    }
-                if (localUserTracker){
-                                    if (localUser==null){
-
-                                        writeStartElement(null, "http://impl.service.server.prms.ucas.com", "user", xmlWriter);
-
-                                       // write the nil attribute
-                                      writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","nil","1",xmlWriter);
-                                      xmlWriter.writeEndElement();
-                                    }else{
-                                     localUser.serialize(new javax.xml.namespace.QName("http://impl.service.server.prms.ucas.com","user"),
-                                        xmlWriter);
-                                    }
-                                }
+               
+                                    namespace = "http://impl.service.server.prms.ucas.com";
+                                    writeStartElement(null, namespace, "id", xmlWriter);
+                             
+                                               if (localId==java.lang.Long.MIN_VALUE) {
+                                           
+                                                         throw new org.apache.axis2.databinding.ADBException("id cannot be null!!");
+                                                      
+                                               } else {
+                                                    xmlWriter.writeCharacters(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localId));
+                                               }
+                                    
+                                   xmlWriter.writeEndElement();
+                             
                     xmlWriter.writeEndElement();
                
 
@@ -327,9 +316,9 @@
         * Postcondition: If this object is an element, the reader is positioned at its end element
         *                If this object is a complex type, the reader is positioned at the end element of its outer element
         */
-        public static Save parse(javax.xml.stream.XMLStreamReader reader) throws java.lang.Exception{
-            Save object =
-                new Save();
+        public static GetAllByArticleId parse(javax.xml.stream.XMLStreamReader reader) throws java.lang.Exception{
+            GetAllByArticleId object =
+                new GetAllByArticleId();
 
             int event;
             javax.xml.namespace.QName currentQName = null;
@@ -355,10 +344,10 @@
 
                     java.lang.String type = fullTypeName.substring(fullTypeName.indexOf(":")+1);
                     
-                            if (!"save".equals(type)){
+                            if (!"getAllByArticleId".equals(type)){
                                 //find namespace for the prefix
                                 java.lang.String nsUri = reader.getNamespaceContext().getNamespaceURI(nsPrefix);
-                                return (Save)com.ucas.prms.server.entity.xsd.ExtensionMapper.getTypeObject(
+                                return (GetAllByArticleId)com.ucas.prms.server.entity.xsd.ExtensionMapper.getTypeObject(
                                      nsUri,type,reader);
                               }
                         
@@ -383,27 +372,28 @@
                                     
                                     while (!reader.isStartElement() && !reader.isEndElement()) reader.next();
                                 
-                                    if (reader.isStartElement() && new javax.xml.namespace.QName("http://impl.service.server.prms.ucas.com","user").equals(reader.getName()) || new javax.xml.namespace.QName("","user").equals(reader.getName()) ){
+                                    if (reader.isStartElement() && new javax.xml.namespace.QName("http://impl.service.server.prms.ucas.com","id").equals(reader.getName()) || new javax.xml.namespace.QName("","id").equals(reader.getName()) ){
                                 
-                                      nillableValue = reader.getAttributeValue("http://www.w3.org/2001/XMLSchema-instance","nil");
-                                      if ("true".equals(nillableValue) || "1".equals(nillableValue)){
-                                          object.setUser(null);
-                                          reader.next();
-                                            
-                                            reader.next();
-                                          
-                                      }else{
+                                    nillableValue = reader.getAttributeValue("http://www.w3.org/2001/XMLSchema-instance","nil");
+                                    if ("true".equals(nillableValue) || "1".equals(nillableValue)){
+                                        throw new org.apache.axis2.databinding.ADBException("The element: "+"id" +"  cannot be null");
+                                    }
                                     
-                                                object.setUser(com.ucas.prms.server.entity.xsd.User.Factory.parse(reader));
+
+                                    java.lang.String content = reader.getElementText();
+                                    
+                                              object.setId(
+                                                    org.apache.axis2.databinding.utils.ConverterUtil.convertToLong(content));
                                               
                                         reader.next();
-                                    }
+                                    
                               }  // End of if for expected property start element
                                 
-                                    else {
-                                        
-                                    }
-                                  
+                                else{
+                                    // 1 - A start element we are not expecting indicates an invalid parameter was passed
+                                    throw new org.apache.axis2.databinding.ADBException("Unexpected subelement " + reader.getName());
+                                }
+                              
                             while (!reader.isStartElement() && !reader.isEndElement())
                                 reader.next();
                             

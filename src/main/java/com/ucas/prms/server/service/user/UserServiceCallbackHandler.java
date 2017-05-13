@@ -6,7 +6,7 @@
  * by the Apache Axis2 version: 1.7.4  Built on : Oct 21, 2016 (10:47:34 BST)
  */
 
-    package com.ucas.prms.server.service.impl;
+    package com.ucas.prms.server.service.user;
 
     /**
      *  UserServiceCallbackHandler Callback class, Users can extend this class and implement
@@ -49,7 +49,7 @@
             * override this method for handling normal response from findAll operation
             */
            public void receiveResultfindAll(
-                    com.ucas.prms.server.service.impl.FindAllResponse result
+                    com.ucas.prms.server.service.user.FindAllResponse result
                         ) {
            }
 
@@ -65,7 +65,7 @@
             * override this method for handling normal response from login operation
             */
            public void receiveResultlogin(
-                    com.ucas.prms.server.service.impl.LoginResponse result
+                    com.ucas.prms.server.service.user.LoginResponse result
                         ) {
            }
 
@@ -83,7 +83,7 @@
             * override this method for handling normal response from getById operation
             */
            public void receiveResultgetById(
-                    com.ucas.prms.server.service.impl.GetByIdResponse result
+                    com.ucas.prms.server.service.user.GetByIdResponse result
                         ) {
            }
 
@@ -99,7 +99,7 @@
             * override this method for handling normal response from getByIds operation
             */
            public void receiveResultgetByIds(
-                    com.ucas.prms.server.service.impl.GetByIdsResponse result
+                    com.ucas.prms.server.service.user.GetByIdsResponse result
                         ) {
            }
 

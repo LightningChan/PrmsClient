@@ -1,109 +1,71 @@
 
 /**
- * GetByIdsResponse.java
+ * Save.java
  *
  * This file was auto-generated from WSDL
  * by the Apache Axis2 version: 1.7.4  Built on : Oct 21, 2016 (10:48:01 BST)
  */
 
             
-                package com.ucas.prms.server.service.impl;
+                package com.ucas.prms.server.service.user;
             
 
             /**
-            *  GetByIdsResponse bean class
+            *  Save bean class
             */
             @SuppressWarnings({"unchecked","unused"})
         
-        public  class GetByIdsResponse
+        public  class Save
         implements org.apache.axis2.databinding.ADBBean{
         
                 public static final javax.xml.namespace.QName MY_QNAME = new javax.xml.namespace.QName(
                 "http://impl.service.server.prms.ucas.com",
-                "getByIdsResponse",
+                "save",
                 "ns2");
 
             
 
                         /**
-                        * field for _return
-                        * This was an Array!
+                        * field for User
                         */
 
                         
-                                    protected com.ucas.prms.server.entity.xsd.User[] local_return ;
+                                    protected com.ucas.prms.server.entity.xsd.User localUser ;
                                 
                            /*  This tracker boolean wil be used to detect whether the user called the set method
                           *   for this attribute. It will be used to determine whether to include this field
                            *   in the serialized XML
                            */
-                           protected boolean local_returnTracker = false ;
+                           protected boolean localUserTracker = false ;
 
-                           public boolean is_returnSpecified(){
-                               return local_returnTracker;
+                           public boolean isUserSpecified(){
+                               return localUserTracker;
                            }
 
                            
 
                            /**
                            * Auto generated getter method
-                           * @return com.ucas.prms.server.entity.xsd.User[]
+                           * @return com.ucas.prms.server.entity.xsd.User
                            */
-                           public  com.ucas.prms.server.entity.xsd.User[] get_return(){
-                               return local_return;
+                           public  com.ucas.prms.server.entity.xsd.User getUser(){
+                               return localUser;
                            }
 
                            
                         
-
-
-                               
-                              /**
-                               * validate the array for _return
+                            /**
+                               * Auto generated setter method
+                               * @param param User
                                */
-                              protected void validate_return(com.ucas.prms.server.entity.xsd.User[] param){
-                             
-                              }
+                               public void setUser(com.ucas.prms.server.entity.xsd.User param){
+                            localUserTracker = true;
+                                   
+                                            this.localUser=param;
+                                       
 
-
-                             /**
-                              * Auto generated setter method
-                              * @param param _return
-                              */
-                              public void set_return(com.ucas.prms.server.entity.xsd.User[] param){
-                              
-                                   validate_return(param);
-
-                               local_returnTracker = true;
-                                      
-                                      this.local_return=param;
-                              }
-
-                               
-                             
-                             /**
-                             * Auto generated add method for the array for convenience
-                             * @param param com.ucas.prms.server.entity.xsd.User
-                             */
-                             public void add_return(com.ucas.prms.server.entity.xsd.User param){
-                                   if (local_return == null){
-                                   local_return = new com.ucas.prms.server.entity.xsd.User[]{};
-                                   }
-
+                               }
                             
-                                 //update the setting tracker
-                                local_returnTracker = true;
-                            
-
-                               java.util.List list =
-                            org.apache.axis2.databinding.utils.ConverterUtil.toList(local_return);
-                               list.add(param);
-                               this.local_return =
-                             (com.ucas.prms.server.entity.xsd.User[])list.toArray(
-                            new com.ucas.prms.server.entity.xsd.User[list.size()]);
-
-                             }
-                             
 
      
      
@@ -151,43 +113,29 @@
                    java.lang.String namespacePrefix = registerPrefix(xmlWriter,"http://impl.service.server.prms.ucas.com");
                    if ((namespacePrefix != null) && (namespacePrefix.trim().length() > 0)){
                        writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","type",
-                           namespacePrefix+":getByIdsResponse",
+                           namespacePrefix+":save",
                            xmlWriter);
                    } else {
                        writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","type",
-                           "getByIdsResponse",
+                           "save",
                            xmlWriter);
                    }
 
                
                    }
-                if (local_returnTracker){
-                                       if (local_return!=null){
-                                            for (int i = 0;i < local_return.length;i++){
-                                                if (local_return[i] != null){
-                                                 local_return[i].serialize(new javax.xml.namespace.QName("http://impl.service.server.prms.ucas.com","return"),
-                                                           xmlWriter);
-                                                } else {
-                                                   
-                                                            writeStartElement(null, "http://impl.service.server.prms.ucas.com", "return", xmlWriter);
+                if (localUserTracker){
+                                    if (localUser==null){
 
-                                                           // write the nil attribute
-                                                           writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","nil","1",xmlWriter);
-                                                           xmlWriter.writeEndElement();
-                                                    
-                                                }
+                                        writeStartElement(null, "http://impl.service.server.prms.ucas.com", "user", xmlWriter);
 
-                                            }
-                                     } else {
-                                        
-                                                writeStartElement(null, "http://impl.service.server.prms.ucas.com", "return", xmlWriter);
-
-                                               // write the nil attribute
-                                               writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","nil","1",xmlWriter);
-                                               xmlWriter.writeEndElement();
-                                        
+                                       // write the nil attribute
+                                      writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","nil","1",xmlWriter);
+                                      xmlWriter.writeEndElement();
+                                    }else{
+                                     localUser.serialize(new javax.xml.namespace.QName("http://impl.service.server.prms.ucas.com","user"),
+                                        xmlWriter);
                                     }
-                                 }
+                                }
                     xmlWriter.writeEndElement();
                
 
@@ -379,9 +327,9 @@
         * Postcondition: If this object is an element, the reader is positioned at its end element
         *                If this object is a complex type, the reader is positioned at the end element of its outer element
         */
-        public static GetByIdsResponse parse(javax.xml.stream.XMLStreamReader reader) throws java.lang.Exception{
-            GetByIdsResponse object =
-                new GetByIdsResponse();
+        public static Save parse(javax.xml.stream.XMLStreamReader reader) throws java.lang.Exception{
+            Save object =
+                new Save();
 
             int event;
             javax.xml.namespace.QName currentQName = null;
@@ -407,10 +355,10 @@
 
                     java.lang.String type = fullTypeName.substring(fullTypeName.indexOf(":")+1);
                     
-                            if (!"getByIdsResponse".equals(type)){
+                            if (!"save".equals(type)){
                                 //find namespace for the prefix
                                 java.lang.String nsUri = reader.getNamespaceContext().getNamespaceURI(nsPrefix);
-                                return (GetByIdsResponse)com.ucas.prms.server.entity.xsd.ExtensionMapper.getTypeObject(
+                                return (Save)com.ucas.prms.server.entity.xsd.ExtensionMapper.getTypeObject(
                                      nsUri,type,reader);
                               }
                         
@@ -432,61 +380,24 @@
                     
                     reader.next();
                 
-                        java.util.ArrayList list1 = new java.util.ArrayList();
-                    
                                     
                                     while (!reader.isStartElement() && !reader.isEndElement()) reader.next();
                                 
-                                    if (reader.isStartElement() && new javax.xml.namespace.QName("http://impl.service.server.prms.ucas.com","return").equals(reader.getName()) || new javax.xml.namespace.QName("","return").equals(reader.getName()) ){
+                                    if (reader.isStartElement() && new javax.xml.namespace.QName("http://impl.service.server.prms.ucas.com","user").equals(reader.getName()) || new javax.xml.namespace.QName("","user").equals(reader.getName()) ){
                                 
+                                      nillableValue = reader.getAttributeValue("http://www.w3.org/2001/XMLSchema-instance","nil");
+                                      if ("true".equals(nillableValue) || "1".equals(nillableValue)){
+                                          object.setUser(null);
+                                          reader.next();
+                                            
+                                            reader.next();
+                                          
+                                      }else{
                                     
-                                    
-                                    // Process the array and step past its final element's end.
-                                    
-                                    
-                                                          nillableValue = reader.getAttributeValue("http://www.w3.org/2001/XMLSchema-instance","nil");
-                                                          if ("true".equals(nillableValue) || "1".equals(nillableValue)){
-                                                              list1.add(null);
-                                                              reader.next();
-                                                          } else {
-                                                        list1.add(com.ucas.prms.server.entity.xsd.User.Factory.parse(reader));
-                                                                }
-                                                        //loop until we find a start element that is not part of this array
-                                                        boolean loopDone1 = false;
-                                                        while(!loopDone1){
-                                                            // We should be at the end element, but make sure
-                                                            while (!reader.isEndElement())
-                                                                reader.next();
-                                                            // Step out of this element
-                                                            reader.next();
-                                                            // Step to next element event.
-                                                            while (!reader.isStartElement() && !reader.isEndElement())
-                                                                reader.next();
-                                                            if (reader.isEndElement()){
-                                                                //two continuous end elements means we are exiting the xml structure
-                                                                loopDone1 = true;
-                                                            } else {
-                                                                if (new javax.xml.namespace.QName("http://impl.service.server.prms.ucas.com","return").equals(reader.getName())){
-                                                                    
-                                                                      nillableValue = reader.getAttributeValue("http://www.w3.org/2001/XMLSchema-instance","nil");
-                                                                      if ("true".equals(nillableValue) || "1".equals(nillableValue)){
-                                                                          list1.add(null);
-                                                                          reader.next();
-                                                                      } else {
-                                                                    list1.add(com.ucas.prms.server.entity.xsd.User.Factory.parse(reader));
-                                                                        }
-                                                                }else{
-                                                                    loopDone1 = true;
-                                                                }
-                                                            }
-                                                        }
-                                                        // call the converter utility  to convert and set the array
-                                                        
-                                                        object.set_return((com.ucas.prms.server.entity.xsd.User[])
-                                                            org.apache.axis2.databinding.utils.ConverterUtil.convertToArray(
-                                                                com.ucas.prms.server.entity.xsd.User.class,
-                                                                list1));
-                                                            
+                                                object.setUser(com.ucas.prms.server.entity.xsd.User.Factory.parse(reader));
+                                              
+                                        reader.next();
+                                    }
                               }  // End of if for expected property start element
                                 
                                     else {

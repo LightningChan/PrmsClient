@@ -1,21 +1,21 @@
 
 /**
- * UserServiceStub.java
+ * ArticleServiceStub.java
  *
  * This file was auto-generated from WSDL
  * by the Apache Axis2 version: 1.7.4  Built on : Oct 21, 2016 (10:47:34 BST)
  */
-        package com.ucas.prms.server.service.impl;
+        package com.ucas.prms.server.service.article;
 
         
 
         /*
-        *  UserServiceStub java implementation
+        *  ArticleServiceStub java implementation
         */
 
         
-        public class UserServiceStub extends org.apache.axis2.client.Stub
-        implements UserService{
+        public class ArticleServiceStub extends org.apache.axis2.client.Stub
+        implements ArticleService{
         protected org.apache.axis2.description.AxisOperation[] _operations;
 
         //hashmaps to keep the fault mapping
@@ -38,13 +38,13 @@
     private void populateAxisService() throws org.apache.axis2.AxisFault {
 
      //creating the Service with a unique name
-     _service = new org.apache.axis2.description.AxisService("UserService" + getUniqueSuffix());
+     _service = new org.apache.axis2.description.AxisService("ArticleService" + getUniqueSuffix());
      addAnonymousOperations();
 
         //creating the operations
         org.apache.axis2.description.AxisOperation __operation;
 
-        _operations = new org.apache.axis2.description.AxisOperation[5];
+        _operations = new org.apache.axis2.description.AxisOperation[4];
         
                    __operation = new org.apache.axis2.description.OutInAxisOperation();
                 
@@ -58,18 +58,6 @@
             _operations[0]=__operation;
             
         
-                   __operation = new org.apache.axis2.description.OutInAxisOperation();
-                
-
-            __operation.setName(new javax.xml.namespace.QName("http://impl.service.server.prms.ucas.com", "login"));
-	    _service.addOperation(__operation);
-	    
-
-	    
-	    
-            _operations[1]=__operation;
-            
-        
                     __operation = new org.apache.axis2.description.OutOnlyAxisOperation();
                 
 
@@ -79,7 +67,7 @@
 
 	    
 	    
-            _operations[2]=__operation;
+            _operations[1]=__operation;
             
         
                    __operation = new org.apache.axis2.description.OutInAxisOperation();
@@ -91,7 +79,7 @@
 
 	    
 	    
-            _operations[3]=__operation;
+            _operations[2]=__operation;
             
         
                    __operation = new org.apache.axis2.description.OutInAxisOperation();
@@ -103,7 +91,7 @@
 
 	    
 	    
-            _operations[4]=__operation;
+            _operations[3]=__operation;
             
         
         }
@@ -119,7 +107,7 @@
       *Constructor that takes in a configContext
       */
 
-    public UserServiceStub(org.apache.axis2.context.ConfigurationContext configurationContext,
+    public ArticleServiceStub(org.apache.axis2.context.ConfigurationContext configurationContext,
        java.lang.String targetEndpoint)
        throws org.apache.axis2.AxisFault {
          this(configurationContext,targetEndpoint,false);
@@ -129,7 +117,7 @@
    /**
      * Constructor that takes in a configContext  and useseperate listner
      */
-   public UserServiceStub(org.apache.axis2.context.ConfigurationContext configurationContext,
+   public ArticleServiceStub(org.apache.axis2.context.ConfigurationContext configurationContext,
         java.lang.String targetEndpoint, boolean useSeparateListener)
         throws org.apache.axis2.AxisFault {
          //To populate AxisService
@@ -152,25 +140,25 @@
     /**
      * Default Constructor
      */
-    public UserServiceStub(org.apache.axis2.context.ConfigurationContext configurationContext) throws org.apache.axis2.AxisFault {
+    public ArticleServiceStub(org.apache.axis2.context.ConfigurationContext configurationContext) throws org.apache.axis2.AxisFault {
         
-                    this(configurationContext,"http://localhost:8080/PrmsServer/services/UserService.UserServiceHttpSoap12Endpoint/" );
+                    this(configurationContext,"http://localhost:8080/PrmsServer/services/ArticleService.ArticleServiceHttpSoap12Endpoint/" );
                 
     }
 
     /**
      * Default Constructor
      */
-    public UserServiceStub() throws org.apache.axis2.AxisFault {
+    public ArticleServiceStub() throws org.apache.axis2.AxisFault {
         
-                    this("http://localhost:8080/PrmsServer/services/UserService.UserServiceHttpSoap12Endpoint/" );
+                    this("http://localhost:8080/PrmsServer/services/ArticleService.ArticleServiceHttpSoap12Endpoint/" );
                 
     }
 
     /**
      * Constructor taking the target endpoint
      */
-    public UserServiceStub(java.lang.String targetEndpoint) throws org.apache.axis2.AxisFault {
+    public ArticleServiceStub(java.lang.String targetEndpoint) throws org.apache.axis2.AxisFault {
         this(null,targetEndpoint);
     }
 
@@ -180,16 +168,16 @@
                     /**
                      * Auto generated method signature
                      * 
-                     * @see com.ucas.prms.server.service.impl.UserService#findAll
-                     * @param findAll9
+                     * @see com.ucas.prms.server.service.article.ArticleService#findAll
+                     * @param findAll7
                     
                      */
 
                     
 
-                            public  com.ucas.prms.server.service.impl.FindAllResponse findAll(
+                            public  com.ucas.prms.server.service.article.FindAllResponse findAll(
 
-                            com.ucas.prms.server.service.impl.FindAll findAll9)
+                            com.ucas.prms.server.service.article.FindAll findAll7)
                         
 
                     throws java.rmi.RemoteException
@@ -216,7 +204,7 @@
                     
                                                     
                                                     env = toEnvelope(getFactory(_operationClient.getOptions().getSoapVersionURI()),
-                                                    findAll9,
+                                                    findAll7,
                                                     optimizeContent(new javax.xml.namespace.QName("http://impl.service.server.prms.ucas.com", "findAll")),
                                                     new javax.xml.namespace.QName("http://impl.service.server.prms.ucas.com", "findAll"));
                                                 
@@ -239,10 +227,10 @@
                 
                                 java.lang.Object object = fromOM(
                                              _returnEnv.getBody().getFirstElement() ,
-                                             com.ucas.prms.server.service.impl.FindAllResponse.class);
+                                             com.ucas.prms.server.service.article.FindAllResponse.class);
 
                                
-                                        return (com.ucas.prms.server.service.impl.FindAllResponse)object;
+                                        return (com.ucas.prms.server.service.article.FindAllResponse)object;
                                    
          }catch(org.apache.axis2.AxisFault f){
 
@@ -300,15 +288,15 @@
                 /**
                 * Auto generated method signature for Asynchronous Invocations
                 * 
-                * @see com.ucas.prms.server.service.impl.UserService#startfindAll
-                    * @param findAll9
+                * @see com.ucas.prms.server.service.article.ArticleService#startfindAll
+                    * @param findAll7
                 
                 */
                 public  void startfindAll(
 
-                 com.ucas.prms.server.service.impl.FindAll findAll9,
+                 com.ucas.prms.server.service.article.FindAll findAll7,
 
-                  final com.ucas.prms.server.service.impl.UserServiceCallbackHandler callback)
+                  final com.ucas.prms.server.service.article.ArticleServiceCallbackHandler callback)
 
                 throws java.rmi.RemoteException{
 
@@ -331,7 +319,7 @@
                                     
                                                     
                                                     env = toEnvelope(getFactory(_operationClient.getOptions().getSoapVersionURI()),
-                                                    findAll9,
+                                                    findAll7,
                                                     optimizeContent(new javax.xml.namespace.QName("http://impl.service.server.prms.ucas.com", "findAll")),
                                                     new javax.xml.namespace.QName("http://impl.service.server.prms.ucas.com", "findAll"));
                                                 
@@ -351,9 +339,9 @@
                                 org.apache.axiom.soap.SOAPEnvelope resultEnv = resultContext.getEnvelope();
                                 
                                         java.lang.Object object = fromOM(resultEnv.getBody().getFirstElement(),
-                                                                         com.ucas.prms.server.service.impl.FindAllResponse.class);
+                                                                         com.ucas.prms.server.service.article.FindAllResponse.class);
                                         callback.receiveResultfindAll(
-                                        (com.ucas.prms.server.service.impl.FindAllResponse)object);
+                                        (com.ucas.prms.server.service.article.FindAllResponse)object);
                                         
                             } catch (org.apache.axis2.AxisFault e) {
                                 callback.receiveErrorfindAll(e);
@@ -441,271 +429,6 @@
            _operationClient.execute(false);
 
                     }
-                
-                    /**
-                     * Auto generated method signature
-                     * 
-                     * @see com.ucas.prms.server.service.impl.UserService#login
-                     * @param login11
-                    
-                     */
-
-                    
-
-                            public  com.ucas.prms.server.service.impl.LoginResponse login(
-
-                            com.ucas.prms.server.service.impl.Login login11)
-                        
-
-                    throws java.rmi.RemoteException
-                    
-                    {
-              org.apache.axis2.context.MessageContext _messageContext = null;
-              try{
-               org.apache.axis2.client.OperationClient _operationClient = _serviceClient.createClient(_operations[1].getName());
-              _operationClient.getOptions().setAction("urn:login");
-              _operationClient.getOptions().setExceptionToBeThrownOnSOAPFault(true);
-
-              
-              
-                  addPropertyToOperationClient(_operationClient,org.apache.axis2.description.WSDL2Constants.ATTR_WHTTP_QUERY_PARAMETER_SEPARATOR,"&");
-              
-
-              // create a message context
-              _messageContext = new org.apache.axis2.context.MessageContext();
-
-              
-
-              // create SOAP envelope with that payload
-              org.apache.axiom.soap.SOAPEnvelope env = null;
-                    
-                                                    
-                                                    env = toEnvelope(getFactory(_operationClient.getOptions().getSoapVersionURI()),
-                                                    login11,
-                                                    optimizeContent(new javax.xml.namespace.QName("http://impl.service.server.prms.ucas.com", "login")),
-                                                    new javax.xml.namespace.QName("http://impl.service.server.prms.ucas.com", "login"));
-                                                
-        //adding SOAP soap_headers
-         _serviceClient.addHeadersToEnvelope(env);
-        // set the message context with that soap envelope
-        _messageContext.setEnvelope(env);
-
-        // add the message contxt to the operation client
-        _operationClient.addMessageContext(_messageContext);
-
-        //execute the operation client
-        _operationClient.execute(true);
-
-         
-               org.apache.axis2.context.MessageContext _returnMessageContext = _operationClient.getMessageContext(
-                                           org.apache.axis2.wsdl.WSDLConstants.MESSAGE_LABEL_IN_VALUE);
-                org.apache.axiom.soap.SOAPEnvelope _returnEnv = _returnMessageContext.getEnvelope();
-                
-                
-                                java.lang.Object object = fromOM(
-                                             _returnEnv.getBody().getFirstElement() ,
-                                             com.ucas.prms.server.service.impl.LoginResponse.class);
-
-                               
-                                        return (com.ucas.prms.server.service.impl.LoginResponse)object;
-                                   
-         }catch(org.apache.axis2.AxisFault f){
-
-            org.apache.axiom.om.OMElement faultElt = f.getDetail();
-            if (faultElt!=null){
-                if (faultExceptionNameMap.containsKey(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"login"))){
-                    //make the fault by reflection
-                    try{
-                        java.lang.String exceptionClassName = (java.lang.String)faultExceptionClassNameMap.get(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"login"));
-                        java.lang.Class exceptionClass = java.lang.Class.forName(exceptionClassName);
-                        java.lang.reflect.Constructor constructor = exceptionClass.getConstructor(java.lang.String.class);
-                        java.lang.Exception ex = (java.lang.Exception) constructor.newInstance(f.getMessage());
-                        //message class
-                        java.lang.String messageClassName = (java.lang.String)faultMessageMap.get(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"login"));
-                        java.lang.Class messageClass = java.lang.Class.forName(messageClassName);
-                        java.lang.Object messageObject = fromOM(faultElt,messageClass);
-                        java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
-                                   new java.lang.Class[]{messageClass});
-                        m.invoke(ex,new java.lang.Object[]{messageObject});
-                        
-
-                        throw new java.rmi.RemoteException(ex.getMessage(), ex);
-                    }catch(java.lang.ClassCastException e){
-                       // we cannot intantiate the class - throw the original Axis fault
-                        throw f;
-                    } catch (java.lang.ClassNotFoundException e) {
-                        // we cannot intantiate the class - throw the original Axis fault
-                        throw f;
-                    }catch (java.lang.NoSuchMethodException e) {
-                        // we cannot intantiate the class - throw the original Axis fault
-                        throw f;
-                    } catch (java.lang.reflect.InvocationTargetException e) {
-                        // we cannot intantiate the class - throw the original Axis fault
-                        throw f;
-                    }  catch (java.lang.IllegalAccessException e) {
-                        // we cannot intantiate the class - throw the original Axis fault
-                        throw f;
-                    }   catch (java.lang.InstantiationException e) {
-                        // we cannot intantiate the class - throw the original Axis fault
-                        throw f;
-                    }
-                }else{
-                    throw f;
-                }
-            }else{
-                throw f;
-            }
-            } finally {
-                if (_messageContext.getTransportOut() != null) {
-                      _messageContext.getTransportOut().getSender().cleanup(_messageContext);
-                }
-            }
-        }
-            
-                /**
-                * Auto generated method signature for Asynchronous Invocations
-                * 
-                * @see com.ucas.prms.server.service.impl.UserService#startlogin
-                    * @param login11
-                
-                */
-                public  void startlogin(
-
-                 com.ucas.prms.server.service.impl.Login login11,
-
-                  final com.ucas.prms.server.service.impl.UserServiceCallbackHandler callback)
-
-                throws java.rmi.RemoteException{
-
-              org.apache.axis2.client.OperationClient _operationClient = _serviceClient.createClient(_operations[1].getName());
-             _operationClient.getOptions().setAction("urn:login");
-             _operationClient.getOptions().setExceptionToBeThrownOnSOAPFault(true);
-
-              
-              
-                  addPropertyToOperationClient(_operationClient,org.apache.axis2.description.WSDL2Constants.ATTR_WHTTP_QUERY_PARAMETER_SEPARATOR,"&");
-              
-
-
-              // create SOAP envelope with that payload
-              org.apache.axiom.soap.SOAPEnvelope env=null;
-              final org.apache.axis2.context.MessageContext _messageContext = new org.apache.axis2.context.MessageContext();
-
-                    
-                                    //Style is Doc.
-                                    
-                                                    
-                                                    env = toEnvelope(getFactory(_operationClient.getOptions().getSoapVersionURI()),
-                                                    login11,
-                                                    optimizeContent(new javax.xml.namespace.QName("http://impl.service.server.prms.ucas.com", "login")),
-                                                    new javax.xml.namespace.QName("http://impl.service.server.prms.ucas.com", "login"));
-                                                
-        // adding SOAP soap_headers
-         _serviceClient.addHeadersToEnvelope(env);
-        // create message context with that soap envelope
-        _messageContext.setEnvelope(env);
-
-        // add the message context to the operation client
-        _operationClient.addMessageContext(_messageContext);
-
-
-                    
-                        _operationClient.setCallback(new org.apache.axis2.client.async.AxisCallback() {
-                            public void onMessage(org.apache.axis2.context.MessageContext resultContext) {
-                            try {
-                                org.apache.axiom.soap.SOAPEnvelope resultEnv = resultContext.getEnvelope();
-                                
-                                        java.lang.Object object = fromOM(resultEnv.getBody().getFirstElement(),
-                                                                         com.ucas.prms.server.service.impl.LoginResponse.class);
-                                        callback.receiveResultlogin(
-                                        (com.ucas.prms.server.service.impl.LoginResponse)object);
-                                        
-                            } catch (org.apache.axis2.AxisFault e) {
-                                callback.receiveErrorlogin(e);
-                            }
-                            }
-
-                            public void onError(java.lang.Exception error) {
-								if (error instanceof org.apache.axis2.AxisFault) {
-									org.apache.axis2.AxisFault f = (org.apache.axis2.AxisFault) error;
-									org.apache.axiom.om.OMElement faultElt = f.getDetail();
-									if (faultElt!=null){
-										if (faultExceptionNameMap.containsKey(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"login"))){
-											//make the fault by reflection
-											try{
-													java.lang.String exceptionClassName = (java.lang.String)faultExceptionClassNameMap.get(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"login"));
-													java.lang.Class exceptionClass = java.lang.Class.forName(exceptionClassName);
-													java.lang.reflect.Constructor constructor = exceptionClass.getConstructor(java.lang.String.class);
-                                                    java.lang.Exception ex = (java.lang.Exception) constructor.newInstance(f.getMessage());
-													//message class
-													java.lang.String messageClassName = (java.lang.String)faultMessageMap.get(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"login"));
-														java.lang.Class messageClass = java.lang.Class.forName(messageClassName);
-													java.lang.Object messageObject = fromOM(faultElt,messageClass);
-													java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
-															new java.lang.Class[]{messageClass});
-													m.invoke(ex,new java.lang.Object[]{messageObject});
-													
-					
-										            callback.receiveErrorlogin(new java.rmi.RemoteException(ex.getMessage(), ex));
-                                            } catch(java.lang.ClassCastException e){
-                                                // we cannot intantiate the class - throw the original Axis fault
-                                                callback.receiveErrorlogin(f);
-                                            } catch (java.lang.ClassNotFoundException e) {
-                                                // we cannot intantiate the class - throw the original Axis fault
-                                                callback.receiveErrorlogin(f);
-                                            } catch (java.lang.NoSuchMethodException e) {
-                                                // we cannot intantiate the class - throw the original Axis fault
-                                                callback.receiveErrorlogin(f);
-                                            } catch (java.lang.reflect.InvocationTargetException e) {
-                                                // we cannot intantiate the class - throw the original Axis fault
-                                                callback.receiveErrorlogin(f);
-                                            } catch (java.lang.IllegalAccessException e) {
-                                                // we cannot intantiate the class - throw the original Axis fault
-                                                callback.receiveErrorlogin(f);
-                                            } catch (java.lang.InstantiationException e) {
-                                                // we cannot intantiate the class - throw the original Axis fault
-                                                callback.receiveErrorlogin(f);
-                                            } catch (org.apache.axis2.AxisFault e) {
-                                                // we cannot intantiate the class - throw the original Axis fault
-                                                callback.receiveErrorlogin(f);
-                                            }
-									    } else {
-										    callback.receiveErrorlogin(f);
-									    }
-									} else {
-									    callback.receiveErrorlogin(f);
-									}
-								} else {
-								    callback.receiveErrorlogin(error);
-								}
-                            }
-
-                            public void onFault(org.apache.axis2.context.MessageContext faultContext) {
-                                org.apache.axis2.AxisFault fault = org.apache.axis2.util.Utils.getInboundFaultFromMessageContext(faultContext);
-                                onError(fault);
-                            }
-
-                            public void onComplete() {
-                                try {
-                                    _messageContext.getTransportOut().getSender().cleanup(_messageContext);
-                                } catch (org.apache.axis2.AxisFault axisFault) {
-                                    callback.receiveErrorlogin(axisFault);
-                                }
-                            }
-                });
-                        
-
-          org.apache.axis2.util.CallbackReceiver _callbackReceiver = null;
-        if ( _operations[1].getMessageReceiver()==null &&  _operationClient.getOptions().isUseSeparateListener()) {
-           _callbackReceiver = new org.apache.axis2.util.CallbackReceiver();
-          _operations[1].setMessageReceiver(
-                    _callbackReceiver);
-        }
-
-           //execute the operation client
-           _operationClient.execute(false);
-
-                    }
                  
                 
                 /**
@@ -713,7 +436,7 @@
                   * 
                   */
                 public void  save(
-                 com.ucas.prms.server.service.impl.Save save13
+                 com.ucas.prms.server.service.article.Save save9
 
                 ) throws java.rmi.RemoteException
                 
@@ -722,7 +445,7 @@
                 org.apache.axis2.context.MessageContext _messageContext = null;
 
                 
-                org.apache.axis2.client.OperationClient _operationClient = _serviceClient.createClient(_operations[2].getName());
+                org.apache.axis2.client.OperationClient _operationClient = _serviceClient.createClient(_operations[1].getName());
                 _operationClient.getOptions().setAction("urn:save");
                 _operationClient.getOptions().setExceptionToBeThrownOnSOAPFault(true);
 
@@ -738,7 +461,7 @@
                                                     
                                                                     
                                                                     env = toEnvelope(getFactory(_operationClient.getOptions().getSoapVersionURI()),
-                                                                    save13,
+                                                                    save9,
                                                                     optimizeContent(new javax.xml.namespace.QName("http://impl.service.server.prms.ucas.com", "save")),
                                                                     new javax.xml.namespace.QName("http://impl.service.server.prms.ucas.com", "save"));
                                                                 
@@ -765,16 +488,16 @@
                     /**
                      * Auto generated method signature
                      * 
-                     * @see com.ucas.prms.server.service.impl.UserService#getById
-                     * @param getById14
+                     * @see com.ucas.prms.server.service.article.ArticleService#getById
+                     * @param getById10
                     
                      */
 
                     
 
-                            public  com.ucas.prms.server.service.impl.GetByIdResponse getById(
+                            public  com.ucas.prms.server.service.article.GetByIdResponse getById(
 
-                            com.ucas.prms.server.service.impl.GetById getById14)
+                            com.ucas.prms.server.service.article.GetById getById10)
                         
 
                     throws java.rmi.RemoteException
@@ -782,7 +505,7 @@
                     {
               org.apache.axis2.context.MessageContext _messageContext = null;
               try{
-               org.apache.axis2.client.OperationClient _operationClient = _serviceClient.createClient(_operations[3].getName());
+               org.apache.axis2.client.OperationClient _operationClient = _serviceClient.createClient(_operations[2].getName());
               _operationClient.getOptions().setAction("urn:getById");
               _operationClient.getOptions().setExceptionToBeThrownOnSOAPFault(true);
 
@@ -801,7 +524,7 @@
                     
                                                     
                                                     env = toEnvelope(getFactory(_operationClient.getOptions().getSoapVersionURI()),
-                                                    getById14,
+                                                    getById10,
                                                     optimizeContent(new javax.xml.namespace.QName("http://impl.service.server.prms.ucas.com", "getById")),
                                                     new javax.xml.namespace.QName("http://impl.service.server.prms.ucas.com", "getById"));
                                                 
@@ -824,10 +547,10 @@
                 
                                 java.lang.Object object = fromOM(
                                              _returnEnv.getBody().getFirstElement() ,
-                                             com.ucas.prms.server.service.impl.GetByIdResponse.class);
+                                             com.ucas.prms.server.service.article.GetByIdResponse.class);
 
                                
-                                        return (com.ucas.prms.server.service.impl.GetByIdResponse)object;
+                                        return (com.ucas.prms.server.service.article.GetByIdResponse)object;
                                    
          }catch(org.apache.axis2.AxisFault f){
 
@@ -885,19 +608,19 @@
                 /**
                 * Auto generated method signature for Asynchronous Invocations
                 * 
-                * @see com.ucas.prms.server.service.impl.UserService#startgetById
-                    * @param getById14
+                * @see com.ucas.prms.server.service.article.ArticleService#startgetById
+                    * @param getById10
                 
                 */
                 public  void startgetById(
 
-                 com.ucas.prms.server.service.impl.GetById getById14,
+                 com.ucas.prms.server.service.article.GetById getById10,
 
-                  final com.ucas.prms.server.service.impl.UserServiceCallbackHandler callback)
+                  final com.ucas.prms.server.service.article.ArticleServiceCallbackHandler callback)
 
                 throws java.rmi.RemoteException{
 
-              org.apache.axis2.client.OperationClient _operationClient = _serviceClient.createClient(_operations[3].getName());
+              org.apache.axis2.client.OperationClient _operationClient = _serviceClient.createClient(_operations[2].getName());
              _operationClient.getOptions().setAction("urn:getById");
              _operationClient.getOptions().setExceptionToBeThrownOnSOAPFault(true);
 
@@ -916,7 +639,7 @@
                                     
                                                     
                                                     env = toEnvelope(getFactory(_operationClient.getOptions().getSoapVersionURI()),
-                                                    getById14,
+                                                    getById10,
                                                     optimizeContent(new javax.xml.namespace.QName("http://impl.service.server.prms.ucas.com", "getById")),
                                                     new javax.xml.namespace.QName("http://impl.service.server.prms.ucas.com", "getById"));
                                                 
@@ -936,9 +659,9 @@
                                 org.apache.axiom.soap.SOAPEnvelope resultEnv = resultContext.getEnvelope();
                                 
                                         java.lang.Object object = fromOM(resultEnv.getBody().getFirstElement(),
-                                                                         com.ucas.prms.server.service.impl.GetByIdResponse.class);
+                                                                         com.ucas.prms.server.service.article.GetByIdResponse.class);
                                         callback.receiveResultgetById(
-                                        (com.ucas.prms.server.service.impl.GetByIdResponse)object);
+                                        (com.ucas.prms.server.service.article.GetByIdResponse)object);
                                         
                             } catch (org.apache.axis2.AxisFault e) {
                                 callback.receiveErrorgetById(e);
@@ -1016,9 +739,9 @@
                         
 
           org.apache.axis2.util.CallbackReceiver _callbackReceiver = null;
-        if ( _operations[3].getMessageReceiver()==null &&  _operationClient.getOptions().isUseSeparateListener()) {
+        if ( _operations[2].getMessageReceiver()==null &&  _operationClient.getOptions().isUseSeparateListener()) {
            _callbackReceiver = new org.apache.axis2.util.CallbackReceiver();
-          _operations[3].setMessageReceiver(
+          _operations[2].setMessageReceiver(
                     _callbackReceiver);
         }
 
@@ -1030,16 +753,16 @@
                     /**
                      * Auto generated method signature
                      * 
-                     * @see com.ucas.prms.server.service.impl.UserService#getByIds
-                     * @param getByIds16
+                     * @see com.ucas.prms.server.service.article.ArticleService#getByIds
+                     * @param getByIds12
                     
                      */
 
                     
 
-                            public  com.ucas.prms.server.service.impl.GetByIdsResponse getByIds(
+                            public  com.ucas.prms.server.service.article.GetByIdsResponse getByIds(
 
-                            com.ucas.prms.server.service.impl.GetByIds getByIds16)
+                            com.ucas.prms.server.service.article.GetByIds getByIds12)
                         
 
                     throws java.rmi.RemoteException
@@ -1047,7 +770,7 @@
                     {
               org.apache.axis2.context.MessageContext _messageContext = null;
               try{
-               org.apache.axis2.client.OperationClient _operationClient = _serviceClient.createClient(_operations[4].getName());
+               org.apache.axis2.client.OperationClient _operationClient = _serviceClient.createClient(_operations[3].getName());
               _operationClient.getOptions().setAction("urn:getByIds");
               _operationClient.getOptions().setExceptionToBeThrownOnSOAPFault(true);
 
@@ -1066,7 +789,7 @@
                     
                                                     
                                                     env = toEnvelope(getFactory(_operationClient.getOptions().getSoapVersionURI()),
-                                                    getByIds16,
+                                                    getByIds12,
                                                     optimizeContent(new javax.xml.namespace.QName("http://impl.service.server.prms.ucas.com", "getByIds")),
                                                     new javax.xml.namespace.QName("http://impl.service.server.prms.ucas.com", "getByIds"));
                                                 
@@ -1089,10 +812,10 @@
                 
                                 java.lang.Object object = fromOM(
                                              _returnEnv.getBody().getFirstElement() ,
-                                             com.ucas.prms.server.service.impl.GetByIdsResponse.class);
+                                             com.ucas.prms.server.service.article.GetByIdsResponse.class);
 
                                
-                                        return (com.ucas.prms.server.service.impl.GetByIdsResponse)object;
+                                        return (com.ucas.prms.server.service.article.GetByIdsResponse)object;
                                    
          }catch(org.apache.axis2.AxisFault f){
 
@@ -1150,19 +873,19 @@
                 /**
                 * Auto generated method signature for Asynchronous Invocations
                 * 
-                * @see com.ucas.prms.server.service.impl.UserService#startgetByIds
-                    * @param getByIds16
+                * @see com.ucas.prms.server.service.article.ArticleService#startgetByIds
+                    * @param getByIds12
                 
                 */
                 public  void startgetByIds(
 
-                 com.ucas.prms.server.service.impl.GetByIds getByIds16,
+                 com.ucas.prms.server.service.article.GetByIds getByIds12,
 
-                  final com.ucas.prms.server.service.impl.UserServiceCallbackHandler callback)
+                  final com.ucas.prms.server.service.article.ArticleServiceCallbackHandler callback)
 
                 throws java.rmi.RemoteException{
 
-              org.apache.axis2.client.OperationClient _operationClient = _serviceClient.createClient(_operations[4].getName());
+              org.apache.axis2.client.OperationClient _operationClient = _serviceClient.createClient(_operations[3].getName());
              _operationClient.getOptions().setAction("urn:getByIds");
              _operationClient.getOptions().setExceptionToBeThrownOnSOAPFault(true);
 
@@ -1181,7 +904,7 @@
                                     
                                                     
                                                     env = toEnvelope(getFactory(_operationClient.getOptions().getSoapVersionURI()),
-                                                    getByIds16,
+                                                    getByIds12,
                                                     optimizeContent(new javax.xml.namespace.QName("http://impl.service.server.prms.ucas.com", "getByIds")),
                                                     new javax.xml.namespace.QName("http://impl.service.server.prms.ucas.com", "getByIds"));
                                                 
@@ -1201,9 +924,9 @@
                                 org.apache.axiom.soap.SOAPEnvelope resultEnv = resultContext.getEnvelope();
                                 
                                         java.lang.Object object = fromOM(resultEnv.getBody().getFirstElement(),
-                                                                         com.ucas.prms.server.service.impl.GetByIdsResponse.class);
+                                                                         com.ucas.prms.server.service.article.GetByIdsResponse.class);
                                         callback.receiveResultgetByIds(
-                                        (com.ucas.prms.server.service.impl.GetByIdsResponse)object);
+                                        (com.ucas.prms.server.service.article.GetByIdsResponse)object);
                                         
                             } catch (org.apache.axis2.AxisFault e) {
                                 callback.receiveErrorgetByIds(e);
@@ -1281,9 +1004,9 @@
                         
 
           org.apache.axis2.util.CallbackReceiver _callbackReceiver = null;
-        if ( _operations[4].getMessageReceiver()==null &&  _operationClient.getOptions().isUseSeparateListener()) {
+        if ( _operations[3].getMessageReceiver()==null &&  _operationClient.getOptions().isUseSeparateListener()) {
            _callbackReceiver = new org.apache.axis2.util.CallbackReceiver();
-          _operations[4].setMessageReceiver(
+          _operations[3].setMessageReceiver(
                     _callbackReceiver);
         }
 
@@ -1307,13 +1030,13 @@
         }
         return false;
     }
-     //http://localhost:8080/PrmsServer/services/UserService.UserServiceHttpSoap12Endpoint/
-            private  org.apache.axiom.om.OMElement  toOM(com.ucas.prms.server.service.impl.FindAll param, boolean optimizeContent)
+     //http://localhost:8080/PrmsServer/services/ArticleService.ArticleServiceHttpSoap12Endpoint/
+            private  org.apache.axiom.om.OMElement  toOM(com.ucas.prms.server.service.article.FindAll param, boolean optimizeContent)
             throws org.apache.axis2.AxisFault {
 
             
                         try{
-                             return param.getOMElement(com.ucas.prms.server.service.impl.FindAll.MY_QNAME,
+                             return param.getOMElement(com.ucas.prms.server.service.article.FindAll.MY_QNAME,
                                           org.apache.axiom.om.OMAbstractFactory.getOMFactory());
                         } catch(org.apache.axis2.databinding.ADBException e){
                             throw org.apache.axis2.AxisFault.makeFault(e);
@@ -1322,12 +1045,12 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(com.ucas.prms.server.service.impl.FindAllResponse param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(com.ucas.prms.server.service.article.FindAllResponse param, boolean optimizeContent)
             throws org.apache.axis2.AxisFault {
 
             
                         try{
-                             return param.getOMElement(com.ucas.prms.server.service.impl.FindAllResponse.MY_QNAME,
+                             return param.getOMElement(com.ucas.prms.server.service.article.FindAllResponse.MY_QNAME,
                                           org.apache.axiom.om.OMAbstractFactory.getOMFactory());
                         } catch(org.apache.axis2.databinding.ADBException e){
                             throw org.apache.axis2.AxisFault.makeFault(e);
@@ -1336,12 +1059,12 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(com.ucas.prms.server.service.impl.Login param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(com.ucas.prms.server.service.article.Save param, boolean optimizeContent)
             throws org.apache.axis2.AxisFault {
 
             
                         try{
-                             return param.getOMElement(com.ucas.prms.server.service.impl.Login.MY_QNAME,
+                             return param.getOMElement(com.ucas.prms.server.service.article.Save.MY_QNAME,
                                           org.apache.axiom.om.OMAbstractFactory.getOMFactory());
                         } catch(org.apache.axis2.databinding.ADBException e){
                             throw org.apache.axis2.AxisFault.makeFault(e);
@@ -1350,12 +1073,12 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(com.ucas.prms.server.service.impl.LoginResponse param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(com.ucas.prms.server.service.article.GetById param, boolean optimizeContent)
             throws org.apache.axis2.AxisFault {
 
             
                         try{
-                             return param.getOMElement(com.ucas.prms.server.service.impl.LoginResponse.MY_QNAME,
+                             return param.getOMElement(com.ucas.prms.server.service.article.GetById.MY_QNAME,
                                           org.apache.axiom.om.OMAbstractFactory.getOMFactory());
                         } catch(org.apache.axis2.databinding.ADBException e){
                             throw org.apache.axis2.AxisFault.makeFault(e);
@@ -1364,12 +1087,12 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(com.ucas.prms.server.service.impl.Save param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(com.ucas.prms.server.service.article.GetByIdResponse param, boolean optimizeContent)
             throws org.apache.axis2.AxisFault {
 
             
                         try{
-                             return param.getOMElement(com.ucas.prms.server.service.impl.Save.MY_QNAME,
+                             return param.getOMElement(com.ucas.prms.server.service.article.GetByIdResponse.MY_QNAME,
                                           org.apache.axiom.om.OMAbstractFactory.getOMFactory());
                         } catch(org.apache.axis2.databinding.ADBException e){
                             throw org.apache.axis2.AxisFault.makeFault(e);
@@ -1378,12 +1101,12 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(com.ucas.prms.server.service.impl.GetById param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(com.ucas.prms.server.service.article.GetByIds param, boolean optimizeContent)
             throws org.apache.axis2.AxisFault {
 
             
                         try{
-                             return param.getOMElement(com.ucas.prms.server.service.impl.GetById.MY_QNAME,
+                             return param.getOMElement(com.ucas.prms.server.service.article.GetByIds.MY_QNAME,
                                           org.apache.axiom.om.OMAbstractFactory.getOMFactory());
                         } catch(org.apache.axis2.databinding.ADBException e){
                             throw org.apache.axis2.AxisFault.makeFault(e);
@@ -1392,40 +1115,12 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(com.ucas.prms.server.service.impl.GetByIdResponse param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(com.ucas.prms.server.service.article.GetByIdsResponse param, boolean optimizeContent)
             throws org.apache.axis2.AxisFault {
 
             
                         try{
-                             return param.getOMElement(com.ucas.prms.server.service.impl.GetByIdResponse.MY_QNAME,
-                                          org.apache.axiom.om.OMAbstractFactory.getOMFactory());
-                        } catch(org.apache.axis2.databinding.ADBException e){
-                            throw org.apache.axis2.AxisFault.makeFault(e);
-                        }
-                    
-
-            }
-        
-            private  org.apache.axiom.om.OMElement  toOM(com.ucas.prms.server.service.impl.GetByIds param, boolean optimizeContent)
-            throws org.apache.axis2.AxisFault {
-
-            
-                        try{
-                             return param.getOMElement(com.ucas.prms.server.service.impl.GetByIds.MY_QNAME,
-                                          org.apache.axiom.om.OMAbstractFactory.getOMFactory());
-                        } catch(org.apache.axis2.databinding.ADBException e){
-                            throw org.apache.axis2.AxisFault.makeFault(e);
-                        }
-                    
-
-            }
-        
-            private  org.apache.axiom.om.OMElement  toOM(com.ucas.prms.server.service.impl.GetByIdsResponse param, boolean optimizeContent)
-            throws org.apache.axis2.AxisFault {
-
-            
-                        try{
-                             return param.getOMElement(com.ucas.prms.server.service.impl.GetByIdsResponse.MY_QNAME,
+                             return param.getOMElement(com.ucas.prms.server.service.article.GetByIdsResponse.MY_QNAME,
                                           org.apache.axiom.om.OMAbstractFactory.getOMFactory());
                         } catch(org.apache.axis2.databinding.ADBException e){
                             throw org.apache.axis2.AxisFault.makeFault(e);
@@ -1435,14 +1130,14 @@
             }
         
                                     
-                                        private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, com.ucas.prms.server.service.impl.FindAll param, boolean optimizeContent, javax.xml.namespace.QName elementQName)
+                                        private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, com.ucas.prms.server.service.article.FindAll param, boolean optimizeContent, javax.xml.namespace.QName elementQName)
                                         throws org.apache.axis2.AxisFault{
 
                                              
                                                     try{
 
                                                             org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
-                                                            emptyEnvelope.getBody().addChild(param.getOMElement(com.ucas.prms.server.service.impl.FindAll.MY_QNAME,factory));
+                                                            emptyEnvelope.getBody().addChild(param.getOMElement(com.ucas.prms.server.service.article.FindAll.MY_QNAME,factory));
                                                             return emptyEnvelope;
                                                         } catch(org.apache.axis2.databinding.ADBException e){
                                                             throw org.apache.axis2.AxisFault.makeFault(e);
@@ -1456,14 +1151,14 @@
 
                              
                                     
-                                        private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, com.ucas.prms.server.service.impl.Login param, boolean optimizeContent, javax.xml.namespace.QName elementQName)
+                                        private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, com.ucas.prms.server.service.article.Save param, boolean optimizeContent, javax.xml.namespace.QName elementQName)
                                         throws org.apache.axis2.AxisFault{
 
                                              
                                                     try{
 
                                                             org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
-                                                            emptyEnvelope.getBody().addChild(param.getOMElement(com.ucas.prms.server.service.impl.Login.MY_QNAME,factory));
+                                                            emptyEnvelope.getBody().addChild(param.getOMElement(com.ucas.prms.server.service.article.Save.MY_QNAME,factory));
                                                             return emptyEnvelope;
                                                         } catch(org.apache.axis2.databinding.ADBException e){
                                                             throw org.apache.axis2.AxisFault.makeFault(e);
@@ -1477,14 +1172,14 @@
 
                              
                                     
-                                        private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, com.ucas.prms.server.service.impl.Save param, boolean optimizeContent, javax.xml.namespace.QName elementQName)
+                                        private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, com.ucas.prms.server.service.article.GetById param, boolean optimizeContent, javax.xml.namespace.QName elementQName)
                                         throws org.apache.axis2.AxisFault{
 
                                              
                                                     try{
 
                                                             org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
-                                                            emptyEnvelope.getBody().addChild(param.getOMElement(com.ucas.prms.server.service.impl.Save.MY_QNAME,factory));
+                                                            emptyEnvelope.getBody().addChild(param.getOMElement(com.ucas.prms.server.service.article.GetById.MY_QNAME,factory));
                                                             return emptyEnvelope;
                                                         } catch(org.apache.axis2.databinding.ADBException e){
                                                             throw org.apache.axis2.AxisFault.makeFault(e);
@@ -1498,35 +1193,14 @@
 
                              
                                     
-                                        private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, com.ucas.prms.server.service.impl.GetById param, boolean optimizeContent, javax.xml.namespace.QName elementQName)
+                                        private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, com.ucas.prms.server.service.article.GetByIds param, boolean optimizeContent, javax.xml.namespace.QName elementQName)
                                         throws org.apache.axis2.AxisFault{
 
                                              
                                                     try{
 
                                                             org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
-                                                            emptyEnvelope.getBody().addChild(param.getOMElement(com.ucas.prms.server.service.impl.GetById.MY_QNAME,factory));
-                                                            return emptyEnvelope;
-                                                        } catch(org.apache.axis2.databinding.ADBException e){
-                                                            throw org.apache.axis2.AxisFault.makeFault(e);
-                                                        }
-                                                
-
-                                        }
-                                
-                             
-                             /* methods to provide back word compatibility */
-
-                             
-                                    
-                                        private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, com.ucas.prms.server.service.impl.GetByIds param, boolean optimizeContent, javax.xml.namespace.QName elementQName)
-                                        throws org.apache.axis2.AxisFault{
-
-                                             
-                                                    try{
-
-                                                            org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
-                                                            emptyEnvelope.getBody().addChild(param.getOMElement(com.ucas.prms.server.service.impl.GetByIds.MY_QNAME,factory));
+                                                            emptyEnvelope.getBody().addChild(param.getOMElement(com.ucas.prms.server.service.article.GetByIds.MY_QNAME,factory));
                                                             return emptyEnvelope;
                                                         } catch(org.apache.axis2.databinding.ADBException e){
                                                             throw org.apache.axis2.AxisFault.makeFault(e);
@@ -1555,65 +1229,51 @@
 
         try {
         
-                if (com.ucas.prms.server.service.impl.FindAll.class.equals(type)){
+                if (com.ucas.prms.server.service.article.FindAll.class.equals(type)){
                 
-                        return com.ucas.prms.server.service.impl.FindAll.Factory.parse(param.getXMLStreamReaderWithoutCaching());
+                        return com.ucas.prms.server.service.article.FindAll.Factory.parse(param.getXMLStreamReaderWithoutCaching());
                     
 
                 }
             
-                if (com.ucas.prms.server.service.impl.FindAllResponse.class.equals(type)){
+                if (com.ucas.prms.server.service.article.FindAllResponse.class.equals(type)){
                 
-                        return com.ucas.prms.server.service.impl.FindAllResponse.Factory.parse(param.getXMLStreamReaderWithoutCaching());
+                        return com.ucas.prms.server.service.article.FindAllResponse.Factory.parse(param.getXMLStreamReaderWithoutCaching());
                     
 
                 }
             
-                if (com.ucas.prms.server.service.impl.GetById.class.equals(type)){
+                if (com.ucas.prms.server.service.article.GetById.class.equals(type)){
                 
-                        return com.ucas.prms.server.service.impl.GetById.Factory.parse(param.getXMLStreamReaderWithoutCaching());
+                        return com.ucas.prms.server.service.article.GetById.Factory.parse(param.getXMLStreamReaderWithoutCaching());
                     
 
                 }
             
-                if (com.ucas.prms.server.service.impl.GetByIdResponse.class.equals(type)){
+                if (com.ucas.prms.server.service.article.GetByIdResponse.class.equals(type)){
                 
-                        return com.ucas.prms.server.service.impl.GetByIdResponse.Factory.parse(param.getXMLStreamReaderWithoutCaching());
+                        return com.ucas.prms.server.service.article.GetByIdResponse.Factory.parse(param.getXMLStreamReaderWithoutCaching());
                     
 
                 }
             
-                if (com.ucas.prms.server.service.impl.GetByIds.class.equals(type)){
+                if (com.ucas.prms.server.service.article.GetByIds.class.equals(type)){
                 
-                        return com.ucas.prms.server.service.impl.GetByIds.Factory.parse(param.getXMLStreamReaderWithoutCaching());
+                        return com.ucas.prms.server.service.article.GetByIds.Factory.parse(param.getXMLStreamReaderWithoutCaching());
                     
 
                 }
             
-                if (com.ucas.prms.server.service.impl.GetByIdsResponse.class.equals(type)){
+                if (com.ucas.prms.server.service.article.GetByIdsResponse.class.equals(type)){
                 
-                        return com.ucas.prms.server.service.impl.GetByIdsResponse.Factory.parse(param.getXMLStreamReaderWithoutCaching());
+                        return com.ucas.prms.server.service.article.GetByIdsResponse.Factory.parse(param.getXMLStreamReaderWithoutCaching());
                     
 
                 }
             
-                if (com.ucas.prms.server.service.impl.Login.class.equals(type)){
+                if (com.ucas.prms.server.service.article.Save.class.equals(type)){
                 
-                        return com.ucas.prms.server.service.impl.Login.Factory.parse(param.getXMLStreamReaderWithoutCaching());
-                    
-
-                }
-            
-                if (com.ucas.prms.server.service.impl.LoginResponse.class.equals(type)){
-                
-                        return com.ucas.prms.server.service.impl.LoginResponse.Factory.parse(param.getXMLStreamReaderWithoutCaching());
-                    
-
-                }
-            
-                if (com.ucas.prms.server.service.impl.Save.class.equals(type)){
-                
-                        return com.ucas.prms.server.service.impl.Save.Factory.parse(param.getXMLStreamReaderWithoutCaching());
+                        return com.ucas.prms.server.service.article.Save.Factory.parse(param.getXMLStreamReaderWithoutCaching());
                     
 
                 }
