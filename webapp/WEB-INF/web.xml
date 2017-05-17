@@ -6,6 +6,10 @@
 
 	<display-name>PrmsService</display-name>
   
+  	<welcome-file-list>
+		<welcome-file>jsp/login.jsp</welcome-file>
+	</welcome-file-list>
+	
 	<!-- 加载所有的配置文件 -->  
 	<context-param>  
 		<param-name>contextConfigLocation</param-name>  

@@ -50,8 +50,20 @@
          * Auto generated method signature for Asynchronous Invocations
          * 
          */
+        public void  delete(
+         com.ucas.prms.server.service.article.Delete delete2
+
+        ) throws java.rmi.RemoteException
+        
+        ;
+
+        
+       /**
+         * Auto generated method signature for Asynchronous Invocations
+         * 
+         */
         public void  save(
-         com.ucas.prms.server.service.article.Save save2
+         com.ucas.prms.server.service.article.Save save3
 
         ) throws java.rmi.RemoteException
         
@@ -62,14 +74,14 @@
         /**
           * Auto generated method signature
           * 
-                    * @param getById3
+                    * @param getById4
                 
          */
 
          
                      public com.ucas.prms.server.service.article.GetByIdResponse getById(
 
-                        com.ucas.prms.server.service.article.GetById getById3)
+                        com.ucas.prms.server.service.article.GetById getById4)
                         throws java.rmi.RemoteException
              ;
 
@@ -77,12 +89,12 @@
          /**
             * Auto generated method signature for Asynchronous Invocations
             * 
-                * @param getById3
+                * @param getById4
             
           */
         public void startgetById(
 
-            com.ucas.prms.server.service.article.GetById getById3,
+            com.ucas.prms.server.service.article.GetById getById4,
 
             final com.ucas.prms.server.service.article.ArticleServiceCallbackHandler callback)
 
@@ -93,14 +105,14 @@
         /**
           * Auto generated method signature
           * 
-                    * @param getByIds5
+                    * @param getByIds6
                 
          */
 
          
                      public com.ucas.prms.server.service.article.GetByIdsResponse getByIds(
 
-                        com.ucas.prms.server.service.article.GetByIds getByIds5)
+                        com.ucas.prms.server.service.article.GetByIds getByIds6)
                         throws java.rmi.RemoteException
              ;
 
@@ -108,12 +120,12 @@
          /**
             * Auto generated method signature for Asynchronous Invocations
             * 
-                * @param getByIds5
+                * @param getByIds6
             
           */
         public void startgetByIds(
 
-            com.ucas.prms.server.service.article.GetByIds getByIds5,
+            com.ucas.prms.server.service.article.GetByIds getByIds6,
 
             final com.ucas.prms.server.service.article.ArticleServiceCallbackHandler callback)
 

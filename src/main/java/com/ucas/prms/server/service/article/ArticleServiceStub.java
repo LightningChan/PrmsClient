@@ -44,7 +44,7 @@
         //creating the operations
         org.apache.axis2.description.AxisOperation __operation;
 
-        _operations = new org.apache.axis2.description.AxisOperation[4];
+        _operations = new org.apache.axis2.description.AxisOperation[5];
         
                    __operation = new org.apache.axis2.description.OutInAxisOperation();
                 
@@ -61,7 +61,7 @@
                     __operation = new org.apache.axis2.description.OutOnlyAxisOperation();
                 
 
-            __operation.setName(new javax.xml.namespace.QName("http://impl.service.server.prms.ucas.com", "save"));
+            __operation.setName(new javax.xml.namespace.QName("http://impl.service.server.prms.ucas.com", "delete"));
 	    _service.addOperation(__operation);
 	    
 
@@ -70,10 +70,10 @@
             _operations[1]=__operation;
             
         
-                   __operation = new org.apache.axis2.description.OutInAxisOperation();
+                    __operation = new org.apache.axis2.description.OutOnlyAxisOperation();
                 
 
-            __operation.setName(new javax.xml.namespace.QName("http://impl.service.server.prms.ucas.com", "getById"));
+            __operation.setName(new javax.xml.namespace.QName("http://impl.service.server.prms.ucas.com", "save"));
 	    _service.addOperation(__operation);
 	    
 
@@ -85,13 +85,25 @@
                    __operation = new org.apache.axis2.description.OutInAxisOperation();
                 
 
-            __operation.setName(new javax.xml.namespace.QName("http://impl.service.server.prms.ucas.com", "getByIds"));
+            __operation.setName(new javax.xml.namespace.QName("http://impl.service.server.prms.ucas.com", "getById"));
 	    _service.addOperation(__operation);
 	    
 
 	    
 	    
             _operations[3]=__operation;
+            
+        
+                   __operation = new org.apache.axis2.description.OutInAxisOperation();
+                
+
+            __operation.setName(new javax.xml.namespace.QName("http://impl.service.server.prms.ucas.com", "getByIds"));
+	    _service.addOperation(__operation);
+	    
+
+	    
+	    
+            _operations[4]=__operation;
             
         
         }
@@ -169,7 +181,7 @@
                      * Auto generated method signature
                      * 
                      * @see com.ucas.prms.server.service.article.ArticleService#findAll
-                     * @param findAll7
+                     * @param findAll8
                     
                      */
 
@@ -177,7 +189,7 @@
 
                             public  com.ucas.prms.server.service.article.FindAllResponse findAll(
 
-                            com.ucas.prms.server.service.article.FindAll findAll7)
+                            com.ucas.prms.server.service.article.FindAll findAll8)
                         
 
                     throws java.rmi.RemoteException
@@ -204,7 +216,7 @@
                     
                                                     
                                                     env = toEnvelope(getFactory(_operationClient.getOptions().getSoapVersionURI()),
-                                                    findAll7,
+                                                    findAll8,
                                                     optimizeContent(new javax.xml.namespace.QName("http://impl.service.server.prms.ucas.com", "findAll")),
                                                     new javax.xml.namespace.QName("http://impl.service.server.prms.ucas.com", "findAll"));
                                                 
@@ -289,12 +301,12 @@
                 * Auto generated method signature for Asynchronous Invocations
                 * 
                 * @see com.ucas.prms.server.service.article.ArticleService#startfindAll
-                    * @param findAll7
+                    * @param findAll8
                 
                 */
                 public  void startfindAll(
 
-                 com.ucas.prms.server.service.article.FindAll findAll7,
+                 com.ucas.prms.server.service.article.FindAll findAll8,
 
                   final com.ucas.prms.server.service.article.ArticleServiceCallbackHandler callback)
 
@@ -319,7 +331,7 @@
                                     
                                                     
                                                     env = toEnvelope(getFactory(_operationClient.getOptions().getSoapVersionURI()),
-                                                    findAll7,
+                                                    findAll8,
                                                     optimizeContent(new javax.xml.namespace.QName("http://impl.service.server.prms.ucas.com", "findAll")),
                                                     new javax.xml.namespace.QName("http://impl.service.server.prms.ucas.com", "findAll"));
                                                 
@@ -435,8 +447,8 @@
                   * Auto generated method signature
                   * 
                   */
-                public void  save(
-                 com.ucas.prms.server.service.article.Save save9
+                public void  delete(
+                 com.ucas.prms.server.service.article.Delete delete10
 
                 ) throws java.rmi.RemoteException
                 
@@ -446,6 +458,61 @@
 
                 
                 org.apache.axis2.client.OperationClient _operationClient = _serviceClient.createClient(_operations[1].getName());
+                _operationClient.getOptions().setAction("urn:delete");
+                _operationClient.getOptions().setExceptionToBeThrownOnSOAPFault(true);
+
+                
+              
+                  addPropertyToOperationClient(_operationClient,org.apache.axis2.description.WSDL2Constants.ATTR_WHTTP_QUERY_PARAMETER_SEPARATOR,"&");
+              
+                org.apache.axiom.soap.SOAPEnvelope env = null;
+                 _messageContext = new org.apache.axis2.context.MessageContext();
+
+                
+                                                    //Style is Doc.
+                                                    
+                                                                    
+                                                                    env = toEnvelope(getFactory(_operationClient.getOptions().getSoapVersionURI()),
+                                                                    delete10,
+                                                                    optimizeContent(new javax.xml.namespace.QName("http://impl.service.server.prms.ucas.com", "delete")),
+                                                                    new javax.xml.namespace.QName("http://impl.service.server.prms.ucas.com", "delete"));
+                                                                
+
+              //adding SOAP soap_headers
+         _serviceClient.addHeadersToEnvelope(env);
+                // create message context with that soap envelope
+
+            _messageContext.setEnvelope(env);
+
+            // add the message contxt to the operation client
+            _operationClient.addMessageContext(_messageContext);
+
+             _operationClient.execute(true);
+
+           
+              if (_messageContext.getTransportOut() != null) {
+                      _messageContext.getTransportOut().getSender().cleanup(_messageContext);
+              }
+           
+             return;
+           }
+             
+                
+                /**
+                  * Auto generated method signature
+                  * 
+                  */
+                public void  save(
+                 com.ucas.prms.server.service.article.Save save11
+
+                ) throws java.rmi.RemoteException
+                
+                
+                {
+                org.apache.axis2.context.MessageContext _messageContext = null;
+
+                
+                org.apache.axis2.client.OperationClient _operationClient = _serviceClient.createClient(_operations[2].getName());
                 _operationClient.getOptions().setAction("urn:save");
                 _operationClient.getOptions().setExceptionToBeThrownOnSOAPFault(true);
 
@@ -461,7 +528,7 @@
                                                     
                                                                     
                                                                     env = toEnvelope(getFactory(_operationClient.getOptions().getSoapVersionURI()),
-                                                                    save9,
+                                                                    save11,
                                                                     optimizeContent(new javax.xml.namespace.QName("http://impl.service.server.prms.ucas.com", "save")),
                                                                     new javax.xml.namespace.QName("http://impl.service.server.prms.ucas.com", "save"));
                                                                 
@@ -489,7 +556,7 @@
                      * Auto generated method signature
                      * 
                      * @see com.ucas.prms.server.service.article.ArticleService#getById
-                     * @param getById10
+                     * @param getById12
                     
                      */
 
@@ -497,7 +564,7 @@
 
                             public  com.ucas.prms.server.service.article.GetByIdResponse getById(
 
-                            com.ucas.prms.server.service.article.GetById getById10)
+                            com.ucas.prms.server.service.article.GetById getById12)
                         
 
                     throws java.rmi.RemoteException
@@ -505,7 +572,7 @@
                     {
               org.apache.axis2.context.MessageContext _messageContext = null;
               try{
-               org.apache.axis2.client.OperationClient _operationClient = _serviceClient.createClient(_operations[2].getName());
+               org.apache.axis2.client.OperationClient _operationClient = _serviceClient.createClient(_operations[3].getName());
               _operationClient.getOptions().setAction("urn:getById");
               _operationClient.getOptions().setExceptionToBeThrownOnSOAPFault(true);
 
@@ -524,7 +591,7 @@
                     
                                                     
                                                     env = toEnvelope(getFactory(_operationClient.getOptions().getSoapVersionURI()),
-                                                    getById10,
+                                                    getById12,
                                                     optimizeContent(new javax.xml.namespace.QName("http://impl.service.server.prms.ucas.com", "getById")),
                                                     new javax.xml.namespace.QName("http://impl.service.server.prms.ucas.com", "getById"));
                                                 
@@ -609,18 +676,18 @@
                 * Auto generated method signature for Asynchronous Invocations
                 * 
                 * @see com.ucas.prms.server.service.article.ArticleService#startgetById
-                    * @param getById10
+                    * @param getById12
                 
                 */
                 public  void startgetById(
 
-                 com.ucas.prms.server.service.article.GetById getById10,
+                 com.ucas.prms.server.service.article.GetById getById12,
 
                   final com.ucas.prms.server.service.article.ArticleServiceCallbackHandler callback)
 
                 throws java.rmi.RemoteException{
 
-              org.apache.axis2.client.OperationClient _operationClient = _serviceClient.createClient(_operations[2].getName());
+              org.apache.axis2.client.OperationClient _operationClient = _serviceClient.createClient(_operations[3].getName());
              _operationClient.getOptions().setAction("urn:getById");
              _operationClient.getOptions().setExceptionToBeThrownOnSOAPFault(true);
 
@@ -639,7 +706,7 @@
                                     
                                                     
                                                     env = toEnvelope(getFactory(_operationClient.getOptions().getSoapVersionURI()),
-                                                    getById10,
+                                                    getById12,
                                                     optimizeContent(new javax.xml.namespace.QName("http://impl.service.server.prms.ucas.com", "getById")),
                                                     new javax.xml.namespace.QName("http://impl.service.server.prms.ucas.com", "getById"));
                                                 
@@ -739,9 +806,9 @@
                         
 
           org.apache.axis2.util.CallbackReceiver _callbackReceiver = null;
-        if ( _operations[2].getMessageReceiver()==null &&  _operationClient.getOptions().isUseSeparateListener()) {
+        if ( _operations[3].getMessageReceiver()==null &&  _operationClient.getOptions().isUseSeparateListener()) {
            _callbackReceiver = new org.apache.axis2.util.CallbackReceiver();
-          _operations[2].setMessageReceiver(
+          _operations[3].setMessageReceiver(
                     _callbackReceiver);
         }
 
@@ -754,7 +821,7 @@
                      * Auto generated method signature
                      * 
                      * @see com.ucas.prms.server.service.article.ArticleService#getByIds
-                     * @param getByIds12
+                     * @param getByIds14
                     
                      */
 
@@ -762,7 +829,7 @@
 
                             public  com.ucas.prms.server.service.article.GetByIdsResponse getByIds(
 
-                            com.ucas.prms.server.service.article.GetByIds getByIds12)
+                            com.ucas.prms.server.service.article.GetByIds getByIds14)
                         
 
                     throws java.rmi.RemoteException
@@ -770,7 +837,7 @@
                     {
               org.apache.axis2.context.MessageContext _messageContext = null;
               try{
-               org.apache.axis2.client.OperationClient _operationClient = _serviceClient.createClient(_operations[3].getName());
+               org.apache.axis2.client.OperationClient _operationClient = _serviceClient.createClient(_operations[4].getName());
               _operationClient.getOptions().setAction("urn:getByIds");
               _operationClient.getOptions().setExceptionToBeThrownOnSOAPFault(true);
 
@@ -789,7 +856,7 @@
                     
                                                     
                                                     env = toEnvelope(getFactory(_operationClient.getOptions().getSoapVersionURI()),
-                                                    getByIds12,
+                                                    getByIds14,
                                                     optimizeContent(new javax.xml.namespace.QName("http://impl.service.server.prms.ucas.com", "getByIds")),
                                                     new javax.xml.namespace.QName("http://impl.service.server.prms.ucas.com", "getByIds"));
                                                 
@@ -874,18 +941,18 @@
                 * Auto generated method signature for Asynchronous Invocations
                 * 
                 * @see com.ucas.prms.server.service.article.ArticleService#startgetByIds
-                    * @param getByIds12
+                    * @param getByIds14
                 
                 */
                 public  void startgetByIds(
 
-                 com.ucas.prms.server.service.article.GetByIds getByIds12,
+                 com.ucas.prms.server.service.article.GetByIds getByIds14,
 
                   final com.ucas.prms.server.service.article.ArticleServiceCallbackHandler callback)
 
                 throws java.rmi.RemoteException{
 
-              org.apache.axis2.client.OperationClient _operationClient = _serviceClient.createClient(_operations[3].getName());
+              org.apache.axis2.client.OperationClient _operationClient = _serviceClient.createClient(_operations[4].getName());
              _operationClient.getOptions().setAction("urn:getByIds");
              _operationClient.getOptions().setExceptionToBeThrownOnSOAPFault(true);
 
@@ -904,7 +971,7 @@
                                     
                                                     
                                                     env = toEnvelope(getFactory(_operationClient.getOptions().getSoapVersionURI()),
-                                                    getByIds12,
+                                                    getByIds14,
                                                     optimizeContent(new javax.xml.namespace.QName("http://impl.service.server.prms.ucas.com", "getByIds")),
                                                     new javax.xml.namespace.QName("http://impl.service.server.prms.ucas.com", "getByIds"));
                                                 
@@ -1004,9 +1071,9 @@
                         
 
           org.apache.axis2.util.CallbackReceiver _callbackReceiver = null;
-        if ( _operations[3].getMessageReceiver()==null &&  _operationClient.getOptions().isUseSeparateListener()) {
+        if ( _operations[4].getMessageReceiver()==null &&  _operationClient.getOptions().isUseSeparateListener()) {
            _callbackReceiver = new org.apache.axis2.util.CallbackReceiver();
-          _operations[3].setMessageReceiver(
+          _operations[4].setMessageReceiver(
                     _callbackReceiver);
         }
 
@@ -1051,6 +1118,20 @@
             
                         try{
                              return param.getOMElement(com.ucas.prms.server.service.article.FindAllResponse.MY_QNAME,
+                                          org.apache.axiom.om.OMAbstractFactory.getOMFactory());
+                        } catch(org.apache.axis2.databinding.ADBException e){
+                            throw org.apache.axis2.AxisFault.makeFault(e);
+                        }
+                    
+
+            }
+        
+            private  org.apache.axiom.om.OMElement  toOM(com.ucas.prms.server.service.article.Delete param, boolean optimizeContent)
+            throws org.apache.axis2.AxisFault {
+
+            
+                        try{
+                             return param.getOMElement(com.ucas.prms.server.service.article.Delete.MY_QNAME,
                                           org.apache.axiom.om.OMAbstractFactory.getOMFactory());
                         } catch(org.apache.axis2.databinding.ADBException e){
                             throw org.apache.axis2.AxisFault.makeFault(e);
@@ -1151,6 +1232,27 @@
 
                              
                                     
+                                        private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, com.ucas.prms.server.service.article.Delete param, boolean optimizeContent, javax.xml.namespace.QName elementQName)
+                                        throws org.apache.axis2.AxisFault{
+
+                                             
+                                                    try{
+
+                                                            org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
+                                                            emptyEnvelope.getBody().addChild(param.getOMElement(com.ucas.prms.server.service.article.Delete.MY_QNAME,factory));
+                                                            return emptyEnvelope;
+                                                        } catch(org.apache.axis2.databinding.ADBException e){
+                                                            throw org.apache.axis2.AxisFault.makeFault(e);
+                                                        }
+                                                
+
+                                        }
+                                
+                             
+                             /* methods to provide back word compatibility */
+
+                             
+                                    
                                         private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, com.ucas.prms.server.service.article.Save param, boolean optimizeContent, javax.xml.namespace.QName elementQName)
                                         throws org.apache.axis2.AxisFault{
 
@@ -1229,6 +1331,13 @@
 
         try {
         
+                if (com.ucas.prms.server.service.article.Delete.class.equals(type)){
+                
+                        return com.ucas.prms.server.service.article.Delete.Factory.parse(param.getXMLStreamReaderWithoutCaching());
+                    
+
+                }
+            
                 if (com.ucas.prms.server.service.article.FindAll.class.equals(type)){
                 
                         return com.ucas.prms.server.service.article.FindAll.Factory.parse(param.getXMLStreamReaderWithoutCaching());
